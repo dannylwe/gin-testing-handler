@@ -22,4 +22,15 @@ func TestPingRoute(t *testing.T) {
 
 	assert.Equal(t, http.StatusOK, responseRecorder.Code)
 	assert.Equal(t, expected, responseRecorder.Body.String())
+
+	// if rr.Body.String() != expected {
+	// 	t.Errorf("handler returned unexpected body: got %v want %v",
+	// 		rr.Body.String(), expected)
+	// }
+	// var response map[string]string
+	// Err := json.Unmarshal([]byte(responseRecorder.Body.String()), &response)
+	// value, exists := response["message"]
+	// assert.Nil(t, Err)
+	// assert.Equal(t, body["message"], value)
+	// assert.True(t, exists)
 }
