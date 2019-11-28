@@ -5,15 +5,15 @@ import (
 	"net/http"
 )
 
-var PORT string
+var port string
 
 func init(){
-	PORT = "9005"
+	port = "9005"
 }
 
 func main() {
 	r := setupRouter()
-	r.Run(":" + PORT) // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	r.Run(":" + port) // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
 
 func setupRouter() *gin.Engine {
