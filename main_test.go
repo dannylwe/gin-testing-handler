@@ -14,8 +14,7 @@ func TestPingRoute(t *testing.T) {
 	router := setupRouter()
 
 	var response map[string]string
-	expected := make(map[string]string) 
-	expected["message"] = "pong"
+	expected := map[string]string{"message":"pong"}
 
 	responseRecorder := httptest.NewRecorder()
 	req, err := http.NewRequest("GET", "/ping", nil)
